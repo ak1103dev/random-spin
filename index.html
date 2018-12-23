@@ -9,9 +9,22 @@
 </head>
 <body>
   <h1>Random Spin</h1>
+  <button class="btn" onclick="showModal()">set option</button>
   <div class="box">
     <div id="chart"></div>
     <div id="question"><h1></h1></div>
+  </div>
+  <div id="modal" style="display: none;">
+    <div class="modal-head">Set Options</div>
+    <textarea
+      name="options"
+      id="options"
+      rows="20"
+      style="width:calc(100% - 40px); margin:20px;"
+      placeholder="A&#10;B&#10;C&#10;D"
+    ></textarea>
+    <button class="btn" onclick="cancel()">cancel</button>
+    <button class="btn" onclick="setOptions()">set</button>
   </div>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="script.js"></script>
